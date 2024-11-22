@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>CSC311_DB_UI_semesterlongproject</artifactId>
+    <artifactId>GUI_DataManagement_Sangi</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>CSC311_DB_UI_semesterlongproject</name>
 
@@ -30,15 +30,11 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.31</version>
         </dependency>
-        <dependency>
-            <groupId>org.mariadb.jdbc</groupId>
-            <artifactId>mariadb-java-client</artifactId>
-            <version>3.1.4</version>
-        </dependency>
+
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.5</version>
+            <version>2.0.12</version>
         </dependency>
         <dependency>
             <groupId>com.mysql</groupId>
@@ -50,6 +46,11 @@
             <artifactId>junit-jupiter-api</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.azure</groupId>
+            <artifactId>azure-storage-blob</artifactId>
+            <version>12.14.0</version>
         </dependency>
     </dependencies>
 
