@@ -4,7 +4,6 @@ import com.azure.storage.blob.BlobClient;
 import dao.DbConnectivityClass;
 import dao.StorageUploader;
 import javafx.application.Platform;
-import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.concurrent.Task;
@@ -39,10 +38,7 @@ public class DB_GUI_Controller implements Initializable {
     StorageUploader store = new StorageUploader();
     @FXML
     ProgressBar progressBar;
-    @FXML
-    Button editBtn, deleteBtn, addBtn;
-    @FXML
-    MenuItem editItem, deleteItem;
+
     @FXML
     TextField first_name, last_name, department, major, email, imageURL;
     @FXML
@@ -68,16 +64,6 @@ public class DB_GUI_Controller implements Initializable {
             tv_major.setCellValueFactory(new PropertyValueFactory<>("major"));
             tv_email.setCellValueFactory(new PropertyValueFactory<>("email"));
             tv.setItems(data);
-
-            editBtn.setDisable(true);
-            deleteBtn.setDisable(true);
-
-            // Add listener for TableView selection
-            tv.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
-                boolean isSelected = newSelection != null;
-                editBtn.setDisable(!isSelected);
-                deleteBtn.setDisable(!isSelected);
-            });
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
