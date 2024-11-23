@@ -1,24 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <BorderPane prefHeight="600.0" prefWidth="920.0">
-         <center>
-            <ImageView fitHeight="600.0" fitWidth="920.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+<BorderPane fx:id="rootpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewmodel.LoginController">
+   <left>
+      <AnchorPane prefHeight="620.0" prefWidth="410.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="620.0" fitWidth="421.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/basketball-court.jpg" />
+                  <Image url="@../images/bball-hoop.png" />
                </image>
             </ImageView>
-         </center>
-      </BorderPane>
-      <TextField alignment="CENTER" layoutX="386.0" layoutY="238.0" promptText="username" />
-      <TextField alignment="CENTER" layoutX="386.0" layoutY="275.0" promptText="password" />
-   </children>
-</AnchorPane>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="620.0" prefWidth="504.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="usernameTextField" alignment="CENTER" layoutX="171.0" layoutY="267.0" promptText="username" />
+            <TextField fx:id="passwordTextField" alignment="CENTER" layoutX="170.0" layoutY="331.0" promptText="password" />
+            <Label layoutX="114.0" layoutY="507.0" style="-fx-font-size: 14;" text="Don't have an account?" />
+            <Button fx:id="logInBtn" layoutX="220.0" layoutY="420.0" mnemonicParsing="false" onAction="#login" style="-fx-background-color: black; -fx-text-fill: white;" text="Log In" />
+            <Button fx:id="signUpBtn" layoutX="270.0" layoutY="503.0" mnemonicParsing="false" onAction="#signUp" style="-fx-background-color: black; -fx-text-fill: white;" text="Sign Up" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="170.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/lock.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

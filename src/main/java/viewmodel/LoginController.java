@@ -19,7 +19,7 @@ public class LoginController {
 
 
     @FXML
-    private GridPane rootpane;
+    private BorderPane rootpane;
     public void initialize() {
         rootpane.setBackground(new Background(
                         createImage("https://edencoding.com/wp-content/uploads/2021/03/layer_06_1920x1080.png"),
